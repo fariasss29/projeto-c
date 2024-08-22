@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main()
+{
+    float temperatura;
+    int menu1,menu2;
+    
+     printf("BEM VINDO AO PROGAMA DE CONVERSÃO DE TEMPERATURAS\n");
+        
+        printf("por favor insira a temperatura que deseja converter: ");
+        scanf("%f", &temperatura);
+        
+    if(menu1 == 1 && menu2 == 1){
+        printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
+    }
+    else if(menu1 == 2 && menu2 == 2){
+        printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
+    }
+    else if(menu1 == 3 && menu2 == 3){
+        printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
+    }
+    else if(menu1 == 4 && menu2 == 4){
+        
+        printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
+    }
+    
+        printf("Qual medida de unidade de unidade voce deseja que seja a que voce inseriu acima?\n");
+        printf("menu de opções\n");
+        printf("1)celsius\n");
+        printf("2)fahrenheit\n");
+        printf("3)kelvin\n");
+        printf("4)rankine\n");
+        scanf("%d", &menu1);
+        
+        
+        printf("Qual medida de unidade de unidade voce deseja converter?\n");
+        printf("menu de opções:\n");
+        printf("1)celsius\n");
+        printf("2)fahrenheit\n");
+        printf("3)kelvin\n");
+        printf("4)rankine\n");
+        scanf("%d", &menu2);
+    
+
+    
+    if (menu1 == 1 && menu2 == 2){
+        printf("%f\n", temperatura * 1.8 +32);
+    }else if(menu1 == 1 && menu2 == 3){
+        printf("%f\n", temperatura + 273);
+    }else if(menu1 == 1 && menu2 == 4){
+        printf("%f\n", temperatura*1.8) + 491.67;
+    }else{
+        printf("Invalid option\n");
+    }
+   
+
+    return 0;
+}
