@@ -10,17 +10,7 @@ int main()
         printf("por favor insira a temperatura que deseja converter: ");
         scanf("%f", &temperatura);
         
-    if(menu1 == 1 && menu2 == 1){
-        printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
-    }
-    else if(menu1 == 2 && menu2 == 2){
-        printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
-    }
-    else if(menu1 == 3 && menu2 == 3){
-        printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
-    }
-    else if(menu1 == 4 && menu2 == 4){
-        
+    if(menu1 == menu2 ){
         printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
     }
     
@@ -40,8 +30,10 @@ int main()
         printf("3)kelvin\n");
         printf("4)rankine\n");
         scanf("%d", &menu2);
-    
-
+        
+    if(menu1 == menu2 ){
+        printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
+    }
     
     if (menu1 == 1 && menu2 == 2){
         printf("%f\n", temperatura * 1.8 +32);
