@@ -1,50 +1,77 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main()
-{
+int main() {
     float temperatura;
-    int menu1,menu2;
+    int menu1, menu2;
     
-     printf("BEM VINDO AO PROGAMA DE CONVERSÃO DE TEMPERATURAS\n");
+    do {
+        printf("BEM VINDO AO PROGRAMA DE CONVERSÃO DE TEMPERATURAS\n");
         
-        printf("por favor insira a temperatura que deseja converter: ");
+        printf("Por favor, insira a temperatura que deseja converter: ");
         scanf("%f", &temperatura);
         
-    if(menu1 == menu2 ){
-        printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
-    }
-    
-        printf("Qual medida de unidade de unidade voce deseja que seja a que voce inseriu acima?\n");
-        printf("menu de opções\n");
-        printf("1)celsius\n");
-        printf("2)fahrenheit\n");
-        printf("3)kelvin\n");
-        printf("4)rankine\n");
+        printf("Qual é a unidade da temperatura que você inseriu?\n");
+        printf("Menu de opções:\n");
+        printf("1) Celsius\n");
+        printf("2) Fahrenheit\n");
+        printf("3) Kelvin\n");
+        printf("4) Rankine\n");
+        printf("5) Sair do programa\n");
         scanf("%d", &menu1);
         
+        if(menu1 == 5) {
+            exit(0);
+        }
         
-        printf("Qual medida de unidade de unidade voce deseja converter?\n");
-        printf("menu de opções:\n");
-        printf("1)celsius\n");
-        printf("2)fahrenheit\n");
-        printf("3)kelvin\n");
-        printf("4)rankine\n");
+        printf("Para qual unidade de medida você deseja converter?\n");
+        printf("Menu de opções:\n");
+        printf("1) Celsius\n");
+        printf("2) Fahrenheit\n");
+        printf("3) Kelvin\n");
+        printf("4) Rankine\n");
+        printf("5) Sair do programa\n");
         scanf("%d", &menu2);
         
-    if(menu1 == menu2 ){
-        printf("Erro você não pode escolher a mesma unidade de medida para os dois parametros");
-    }
-    
-    if (menu1 == 1 && menu2 == 2){
-        printf("%f\n", temperatura * 1.8 +32);
-    }else if(menu1 == 1 && menu2 == 3){
-        printf("%f\n", temperatura + 273);
-    }else if(menu1 == 1 && menu2 == 4){
-        printf("%f\n", temperatura*1.8) + 491.67;
-    }else{
-        printf("Invalid option\n");
-    }
-   
+        if(menu2 == 5) {
+            exit(0);
+        }
+        
+        if(menu1 == menu2) {
+            printf("Erro: Você não pode escolher a mesma unidade de medida para os dois parâmetros.\n");
+        } else {
+            // Conversões
+            if(menu1 == 1 && menu2 == 2) {
+                printf("%f\n", temperatura * 1.8 + 32);
+            } else if(menu1 == 1 && menu2 == 3) {
+                printf("%f\n", temperatura + 273);
+            } else if(menu1 == 1 && menu2 == 4) {
+                printf("%f\n", temperatura * 1.8 + 491.67);
+            } else if(menu1 == 2 && menu2 == 1) {
+                printf("%f\n", (temperatura - 32) / 1.8);
+            } else if(menu1 == 2 && menu2 == 3) {
+                printf("%f\n", (temperatura - 32) * 5/9 + 273.15);
+            } else if(menu1 == 2 && menu2 == 4) {
+                printf("%f\n", temperatura + 459.67);
+            } else if(menu1 == 3 && menu2 == 1) {
+                printf("%f\n", temperatura - 273);
+            } else if(menu1 == 3 && menu2 == 2) {
+                printf("%f\n", (temperatura - 273.15) * 9/5 + 32);
+            } else if(menu1 == 3 && menu2 == 4) {
+                printf("%f\n", temperatura * 1.8);
+            } else if(menu1 == 4 && menu2 == 1) {
+                printf("%f\n", (temperatura - 491.67) / 1.8);
+            } else if(menu1 == 4 && menu2 == 2) {
+                printf("%f\n", (temperatura - 459.67));
+            } else if(menu1 == 4 && menu2 == 3) {
+                printf("%f\n", temperatura / 1.8);
+            } else {
+                printf("Opção inválida.\n");
+            }
+        }
+        
+        printf("\n");
+    } while(1); // Loop infinito até o usuário escolher sair
 
     return 0;
 }
