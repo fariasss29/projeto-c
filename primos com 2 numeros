@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    float numero1, numero2,numero3;
+    float resultado, resultado2;
+    char continuar;
+    do {
+     printf("BEM VINDO AO PROGAMA DE NUMEROS PRIMOS\n");
+        
+        printf("por favor insira um numero: ");
+        scanf("%f", &numero1);
+        printf("por favor insira mais um numero: ");
+        scanf("%f", &numero3);
+        printf("por favor insira o numero que pretende dividi-los: ");
+        scanf("%f", &numero2);
+        
+        
+        resultado = numero1 / numero2;
+        resultado2 = numero3 / numero2;
+            
+        if(resultado != 1 && resultado != numero1){
+            printf("ele não é um numero primo\n");
+        }
+        else{
+            printf("ele é um numero primo\n");
+        }
+         if(resultado2 != 1 && resultado2 != numero2){
+            printf("ele não é um numero primo\n");
+        }
+        else{
+            printf("ele é um numero primo\n");
+        }
+        
+        printf("voce deseja continuar? (s/n)");
+        scanf(" %c", &continuar);
+        if(continuar == 'n' && continuar == 'N'){
+        exit(0);
+        }
+    
+    } while (continuar == 's' || continuar == 'S');
+    
+return 0;
+}
