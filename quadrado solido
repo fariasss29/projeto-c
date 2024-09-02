@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <locale.h>
+#define maximo  30
+#define minimo  2
+
+
+int main()
+{
+    int linhasquadrado,qntdcoluna,colunasescritas;
+    printf("bem vindo ao progama de quadrado vazados\n");
+    do
+    {
+        printf("insira a quantidade de linhas que voce deseja que seu quadrado tenha: \n");
+        scanf("%d", &linhasquadrado);
+        if(linhasquadrado < minimo || linhasquadrado > maximo)
+            printf("numero ivalido\n");
+    
+    } while(linhasquadrado < minimo || linhasquadrado > maximo);
+       
+        qntdcoluna = linhasquadrado;
+        
+        
+        colunasescritas = 0;
+        while(qntdcoluna > colunasescritas)
+        {
+            printf("0");
+            colunasescritas ++;
+            
+      
+           
+        }
+        printf("\n");
+        
+        
+        colunasescritas = 0;
+        while(colunasescritas < qntdcoluna)
+        {
+            printf("0");
+            colunasescritas ++;
+            
+        }
+        printf("\n");
+     
+        
+        
+  return 0;
+}
