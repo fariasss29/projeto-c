@@ -1,0 +1,37 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int numeros;
+    printf("bem vindo ao progama de soma de numeros \n");
+    int v [100];
+    do
+    {
+    printf("por favor digite quantos numeros voce deseja digitar: ");
+    scanf("%d", & numeros);
+    if(numeros<=0 || numeros>100 )
+        printf("voce é burro ou quer que eu desenhe? ");
+    }while(numeros<=0 || numeros>100 );
+    
+    
+    printf("agora faz o favor de digitar os numeros\n");
+    int numerosdigitados = 0;
+    while(numerosdigitados < numeros){
+        scanf("%d", & v[numerosdigitados]);
+        numerosdigitados++;
+    }
+    
+    int soma = 0; 
+    int contador = 0;
+    while(numeros>contador)
+    {
+        soma += v[contador];
+        contador++;
+    }
+    
+    printf("a soma dos numeros resultou em %d", soma);
+
+
+    return 0;
+}
