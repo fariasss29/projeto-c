@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("BOA BOA bem vindo ao progama de inserir numeros marcha no que é\n");
+        int numeros;
+        char continuar;
+        do{
+            printf("por favor insira os numeros que deseja: ");
+            scanf("%d", &numeros);
+            while (getchar() != '\n'); 
+            printf("voce deseja continuar? s/n\n");
+            scanf("%c", &continuar);
+          } while(continuar == 's' || continuar ==  'S');
+            
+      
+    
+        return 0;
+}
